@@ -1,0 +1,71 @@
+server:
+  port: 8989
+  hostname: 192.168.25.147
+logging:
+  config: null
+first: false
+initSearch: false
+myEmail: shuyuzheng19@gmail.com
+gpt:
+  token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJzaHV5dXpoZW5nMTlAMTYzLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS9hdXRoIjp7InVzZXJfaWQiOiJ1c2VyLW56OG9sQUR3d1lZbG9yM3Bla1NMQVJJNiJ9LCJpc3MiOiJodHRwczovL2F1dGgwLm9wZW5haS5jb20vIiwic3ViIjoiYXV0aDB8NjM5MzI1M2I1NTU0OTQyMzQ4NWNkY2FjIiwiYXVkIjpbImh0dHBzOi8vYXBpLm9wZW5haS5jb20vdjEiLCJodHRwczovL29wZW5haS5vcGVuYWkuYXV0aDBhcHAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY4NjA2MTkwNiwiZXhwIjoxNjg3MjcxNTA2LCJhenAiOiJUZEpJY2JlMTZXb1RIdE45NW55eXdoNUU0eU9vNkl0RyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgbW9kZWwucmVhZCBtb2RlbC5yZXF1ZXN0IG9yZ2FuaXphdGlvbi5yZWFkIG9yZ2FuaXphdGlvbi53cml0ZSJ9.qiF3EvwfA2P6TCNNv2T1dBh7GXrTgU3-GYNZtTWxt6wLnU_tWBdPx29Y1s543x9Z9BRyv-JXAR_jGLll-ffZprCiZx9lVKgx5BgodyhmCQc9vaJ9E_HzvHwJfPd9RqLflQhWZKcFRl-U2URFnjjMFgNPYctZ8LX9DCWgOCTXdQZyg1QK7oWa82QxE1qLrNh4FpZbRIudheGQl4Rep2X1nqinLCliCF7yCZle8W3o5xl-kYrGC6SdFoq8LwBQumDzRjUkBa7xTdYWsagksJIt2-eoZHlQPybkEfMlulvyqmJaPlKMJBEr0cEza6VXoY0Olq8Mb5CU1wsipWAs12RFnA
+  model: text-davinci-002-render-sha-mobile
+meilisearch:
+  apiHost: http://${server.hostname}:7700
+  apiKey: zhengshuyuzuishuaile8889966
+upload:
+  max:
+    size:
+      image: 5
+      file: 300
+  uri: https://${server.hostname}/${upload.prefix}
+  path: /zsy/myBlog/app/static
+  prefix: static/
+spring:
+  mail:
+    password: ONXVXWJZQYQNOKBH
+    username: shuyuzheng19@163.com
+    default-encoding: UTF-8
+    host: smtp.163.com
+  application:
+    name: ZSY-ADMIN
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    username: zsy
+    url: jdbc:postgresql://${server.hostname}:5432/shuyu_blog?characterEncoding=UTF-8&useUnicode=true&serverTimezone=Asia/Shanghai
+    driver-class-name: org.postgresql.Driver
+    password: xiaoyu2528959216
+    hikari:
+      connection-timeout: 10000
+      validation-timeout: 3000
+      idle-timeout: 60000
+      login-timeout: 5
+      max-lifetime: 60000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      read-only: false
+  data:
+    redis:
+      host: ${server.hostname}
+      port: 6379
+      password: xiaoyu2528959216
+      lettuce:
+        pool:
+          max-active: 10
+          max-idle: 5
+          min-idle: 2
+          max-wait: -1
+  jackson:
+    date-format: yyyy年MM月dd日 HH:mm
+    time-zone: Asia/Shanghai
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
