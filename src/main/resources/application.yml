@@ -1,17 +1,17 @@
 server:
   port: 8989
-  hostname: 192.168.25.147
+  hostname: 你的IP
 logging:
   config: null
 first: false
 initSearch: false
-myEmail: shuyuzheng19@gmail.com
+myEmail: 邮箱
 gpt:
-  token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJzaHV5dXpoZW5nMTlAMTYzLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS9hdXRoIjp7InVzZXJfaWQiOiJ1c2VyLW56OG9sQUR3d1lZbG9yM3Bla1NMQVJJNiJ9LCJpc3MiOiJodHRwczovL2F1dGgwLm9wZW5haS5jb20vIiwic3ViIjoiYXV0aDB8NjM5MzI1M2I1NTU0OTQyMzQ4NWNkY2FjIiwiYXVkIjpbImh0dHBzOi8vYXBpLm9wZW5haS5jb20vdjEiLCJodHRwczovL29wZW5haS5vcGVuYWkuYXV0aDBhcHAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTY4NjA2MTkwNiwiZXhwIjoxNjg3MjcxNTA2LCJhenAiOiJUZEpJY2JlMTZXb1RIdE45NW55eXdoNUU0eU9vNkl0RyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgbW9kZWwucmVhZCBtb2RlbC5yZXF1ZXN0IG9yZ2FuaXphdGlvbi5yZWFkIG9yZ2FuaXphdGlvbi53cml0ZSJ9.qiF3EvwfA2P6TCNNv2T1dBh7GXrTgU3-GYNZtTWxt6wLnU_tWBdPx29Y1s543x9Z9BRyv-JXAR_jGLll-ffZprCiZx9lVKgx5BgodyhmCQc9vaJ9E_HzvHwJfPd9RqLflQhWZKcFRl-U2URFnjjMFgNPYctZ8LX9DCWgOCTXdQZyg1QK7oWa82QxE1qLrNh4FpZbRIudheGQl4Rep2X1nqinLCliCF7yCZle8W3o5xl-kYrGC6SdFoq8LwBQumDzRjUkBa7xTdYWsagksJIt2-eoZHlQPybkEfMlulvyqmJaPlKMJBEr0cEza6VXoY0Olq8Mb5CU1wsipWAs12RFnA
+  token: openai token
   model: text-davinci-002-render-sha-mobile
 meilisearch:
   apiHost: http://${server.hostname}:7700
-  apiKey: zhengshuyuzuishuaile8889966
+  apiKey: apikey
 upload:
   max:
     size:
@@ -22,8 +22,8 @@ upload:
   prefix: static/
 spring:
   mail:
-    password: ONXVXWJZQYQNOKBH
-    username: shuyuzheng19@163.com
+    password: password
+    username: username
     default-encoding: UTF-8
     host: smtp.163.com
   application:
@@ -41,7 +41,7 @@ spring:
     username: zsy
     url: jdbc:postgresql://${server.hostname}:5432/shuyu_blog?characterEncoding=UTF-8&useUnicode=true&serverTimezone=Asia/Shanghai
     driver-class-name: org.postgresql.Driver
-    password: xiaoyu2528959216
+    password: password
     hikari:
       connection-timeout: 10000
       validation-timeout: 3000
@@ -55,7 +55,7 @@ spring:
     redis:
       host: ${server.hostname}
       port: 6379
-      password: xiaoyu2528959216
+      password: password
       lettuce:
         pool:
           max-active: 10
